@@ -14,13 +14,5 @@ class AdminHomeController extends Controller
         return view('admin.home');
     }
 
-    public function admin_login(){
-        $password = Hash::make('123456');
-        dd($password);
-        return view('admin.admin_login');
-    }
-
-    public function forget_password(){
-        return view('admin.forget_password');
-    }
+    
 }

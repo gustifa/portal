@@ -7,11 +7,14 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminLoginController;
 
 /*Route Admin*/
-Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('home');
-Route::get('/admin/login', [AdminHomeController::class, 'admin_login'])->name('admin.login');
-Route::get('/admin/forget-password', [AdminHomeController::class, 'forget_password'])->name('admin.forget.password');
+Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin.home')->middleware('admin:admin');
+Route::get('/admin/login', [AdminLoginController::class, 'admin_login'])->name('admin.login');
+Route::post('/admin/login-submit',[AdminLoginController::class, 'login_submit'] )->name('login.submit');
+Route::get('/admin/logout',[AdminLoginController::class, 'logout'] )->name('admin.logout');
+Route::get('/admin/forget-password', [AdminLoginController::class, 'forget_password_submit'])->name('admin.forget.password');
 
 
 Route::get('/', [HomeController::class, 'home']);
