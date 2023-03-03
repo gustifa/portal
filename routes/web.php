@@ -9,8 +9,10 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Admin\AdminHomePageController;
 
 use App\Http\Controllers\Front\HomeController;
+
 
 
 /*Route Front*/
@@ -29,3 +31,6 @@ Route::post('/admin/reset-password-submit',[AdminLoginController::class, 'reset_
 
 Route::get('/admin/edit-profile', [AdminProfileController::class, 'admin_profile'])->name('admin.edit.profile')->middleware('admin:admin');
 Route::post('/admin/edit-profile-submit',[AdminProfileController::class, 'edit_profile_submit'] )->name('admin.edit.profile.submit');
+
+Route::get('/admin/home-page', [AdminHomePageController::class, 'page_home'])->name('admin.home.page');
+Route::post('/admin/home-page/update', [AdminHomePageController::class, 'update'])->name('admin.home.page.update');
