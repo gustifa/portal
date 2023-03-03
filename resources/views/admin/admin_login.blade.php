@@ -42,10 +42,13 @@
                                         <div class="alert text-danger">{{ session()->get('error') }}</div>
                                         @endif
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password"  placeholder="Password">
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"  placeholder="Password">
                                         @error('password')
                                             <div class="alert text-danger">{{ $message }}</div>
                                         @enderror
+                                        @if(session()->get('error'))
+                                        <div class="alert text-danger">{{ session()->get('error') }}</div>
+                                        @endif
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-lg btn-block">

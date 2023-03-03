@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
- use App\Http\Controllers\HomeController;
+//  use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
@@ -9,6 +9,13 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminProfileController;
+
+use App\Http\Controllers\Front\HomeController;
+
+
+/*Route Front*/
+Route::get('/', [HomeController::class, 'Home'])->name('home');
+
 
 /*Route Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin.home')->middleware('admin:admin');
@@ -21,18 +28,4 @@ Route::get('/admin/reset-password/{tokem}/{email}', [AdminLoginController::class
 Route::post('/admin/reset-password-submit',[AdminLoginController::class, 'reset_password_submit'] )->name('admin.reset.password.submit');
 
 Route::get('/admin/edit-profile', [AdminProfileController::class, 'admin_profile'])->name('admin.edit.profile')->middleware('admin:admin');
-
-Route::get('/', [HomeController::class, 'home']);
-
-Route::get('/profile', [profileController::class, 'profile']);
-
-Route::get('/about', [AboutController::class, 'about']);
-
-Route::get('/contact', [ContactController::class, 'contact']);
-
-
-// Route::get('/home', [HomeController::class, 'viewHome'])->name('home');
-
-// Route::get('/contact', [ContactController::class, 'viewContact'])->name('contact');
-
-// Route::get('/about', [AboutController::class,'viewAbout'])->name('about');
+Route::post('/admin/edit-profile-submit',[AdminProfileController::class, 'edit_profile_submit'] )->name('admin.edit.profile.submit');
