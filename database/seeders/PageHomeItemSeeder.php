@@ -24,7 +24,7 @@ class PageHomeItemSeeder extends Seeder
                 'job_category' => 'job_category',
                 'job_location' => 'job_location',
                 'search' => 'Search',
-                'background' => 'background',
+                'background' => 'banner_home.jpg',
                 'created_at' => Carbon::now(),
             ],
         
