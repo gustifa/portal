@@ -33,7 +33,7 @@
                                 @endif
                                 <form method="POST" action="{{route('login.submit')}}">
                                     @csrf
-                                    <div class="form-group">
+                                    <div class="form-group form-custom">
                                         <input type="email" class="form-control @error('email') is-invalid @enderror"  name="email" placeholder="Email Address" value="{{old('email')}}" autofocus>
                                         @error('email')
                                             <div class="alert text-danger">{{ $message }}</div>
@@ -41,7 +41,7 @@
                                         @if(session()->get('error'))
                                         <div class="alert text-danger">{{ session()->get('error') }}</div>
                                         @endif
-                                    <div class="form-group">
+                                    <div class="form-group form-custom">
                                         <input type="password" class="form-control @error('password') is-invalid @enderror" name="password"  placeholder="Password">
                                         @error('password')
                                             <div class="alert text-danger">{{ $message }}</div>
