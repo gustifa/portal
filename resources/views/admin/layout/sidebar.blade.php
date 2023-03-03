@@ -21,7 +21,9 @@
 
                     <li class=""><a class="nav-link" href="setting.html"><i class="fas fa-hand-point-right"></i> <span>Setting</span></a></li>
 
-                    <li class=""><a class="nav-link" href="form.html"><i class="fas fa-hand-point-right"></i> <span>Form</span></a></li>
+                    <li class=""><a class="nav-link" href="{{route('admin.edit.profile')}}"><i class="fas fa-hand-point-right"></i> <span>Profile</span></a></li>
+
+                    <li class=""><a class="nav-link" href="{{route('admin.home.page')}}"><i class="fas fa-hand-point-right"></i> <span>Home Page</span></a></li>
 
                     <li class=""><a class="nav-link" href="table.html"><i class="fas fa-hand-point-right"></i> <span>Table</span></a></li>
 

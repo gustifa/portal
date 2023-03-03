@@ -66,7 +66,7 @@
                                                 <div class="mb-4">
                                                     <label class="form-label">Existing Background *</label>
                                                     <div>
-                                                        <img src="{{ asset('admin/uploads/banner_home.jpg') }}" alt="" class="w_300">
+                                                        <img src="{{ asset('admin/uploads/'.$page_home_data->background) }}" alt="" class="w_300">
                                                     </div>
                                                 </div>
                                                 <div class="mb-4">

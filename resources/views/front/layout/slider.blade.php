@@ -5,11 +5,9 @@
                     <div class="col-md-12">
                         <div class="item">
                             <div class="text">
-                                <h2>Find Your Desired Job</h2>
+                                <h2>{{$PageHomeItem->heading}}</h2>
                                 <p>
-                                    Search the best, perfect and suitable jobs
-                                    that matches your skills in your expertise
-                                    area.
+                                {{$PageHomeItem->text}}.
                                 </p>
                             </div>
                             <div class="search-section">
@@ -22,7 +20,7 @@
                                                         type="text"
                                                         name=""
                                                         class="form-control"
-                                                        placeholder="Job Title"
+                                                        placeholder="{{$PageHomeItem->job_title}}"
                                                     />
                                                 </div>
                                             </div>
@@ -33,7 +31,7 @@
                                                         class="form-select select2"
                                                     >
                                                         <option value="">
-                                                            Job Location
+                                                        {{$PageHomeItem->job_location}}
                                                         </option>
                                                         <option value="">
                                                             Australia
@@ -66,7 +64,7 @@
                                                         class="form-select select2"
                                                     >
                                                         <option value="">
-                                                            Job Category
+                                                        {{$PageHomeItem->job_category}}
                                                         </option>
                                                         <option value="">
                                                             Accounting
@@ -91,7 +89,7 @@
                                                     <i
                                                         class="fas fa-search"
                                                     ></i>
-                                                    Search
+                                                    {{$PageHomeItem->search}}
                                                 </button>
                                             </div>
                                         </div>
