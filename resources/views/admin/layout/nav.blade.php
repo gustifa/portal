@@ -7,7 +7,7 @@
             </form>
             <ul class="navbar-nav navbar-right w-100 justify-content-end">
                 <li class="nav-link">
-                    <a href="" target="_blank" class="btn btn-warning">Front End</a>
+                    <a href="{{route('home')}}" target="_blank" class="btn btn-warning">Front End</a>
                 </li>
 
                 <ul class="dropdown">
